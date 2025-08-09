@@ -26,22 +26,24 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   overflow-x: hidden;
-  position: relative;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(44, 27, 8, 0.15);
-  pointer-events: none;
-  z-index: 0;
+  content: none; /* убираем перекрывающий слой */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 28px 24px;
+  padding: 28px 16px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   position: relative;
   z-index: 1;
 }
@@ -51,14 +53,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 18px 0;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 14px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .logo {
@@ -82,7 +82,6 @@ header {
   font-family: var(--font-serif);
   font-size: 20px;
   letter-spacing: 0.4px;
-  color: var(--choco);
 }
 
 .brand p {
@@ -95,7 +94,6 @@ nav {
   display: flex;
   gap: 14px;
   align-items: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 
 nav a {
@@ -104,24 +102,23 @@ nav a {
   font-weight: 600;
   transition: background-color 0.3s ease, opacity 0.3s ease;
   user-select: none;
-  color: var(--choco);
 }
 
 .btn-ghost {
   color: var(--choco);
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .btn-ghost:hover {
-  background-color: rgba(212, 175, 55, 0.15);
+  background-color: rgba(212, 175, 55, 0.1);
   opacity: 1;
 }
 
 .cart {
-  background: rgba(255 246 241 / 0.15);
+  background: var(--card);
   padding: 8px 12px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow);
   display: flex;
   gap: 8px;
   align-items: center;
@@ -130,12 +127,10 @@ nav a {
   cursor: pointer;
   user-select: none;
   transition: box-shadow 0.3s ease;
-  color: var(--choco);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
 .cart:hover {
-  box-shadow: 0 8px 24px rgba(44, 27, 8, 0.3);
+  box-shadow: 0 12px 30px rgba(90, 60, 40, 0.2);
 }
 
 .hero {
@@ -144,8 +139,6 @@ nav a {
   gap: 28px;
   align-items: center;
   margin-top: 26px;
-  color: var(--choco);
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .hero-left {
@@ -210,7 +203,7 @@ nav a {
 }
 
 .hero-right {
-  background: rgba(44, 27, 8, 0.2);
+  background: var(--card);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: var(--shadow);
@@ -218,7 +211,6 @@ nav a {
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  color: var(--bg);
 }
 
 .hero-right img {
@@ -237,8 +229,6 @@ nav a {
 
 .product-title {
   font-weight: 700;
-  color: var(--choco);
-  text-shadow: 0 1px 2px rgba(255 255 255 / 0.7);
 }
 
 .product-subtitle {
@@ -250,15 +240,10 @@ nav a {
   font-weight: 700;
   color: var(--choco);
   font-size: 18px;
-  text-shadow: 0 1px 2px rgba(255 255 255 / 0.7);
 }
 
 .section {
   margin-top: 42px;
-  padding: 0 8px;
-  background: transparent;
-  color: var(--choco);
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .section h3 {
@@ -270,27 +255,23 @@ nav a {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 18px;
-  background: transparent;
-  padding: 8px 0;
+  gap: 24px;
 }
 
 .card {
-  background: rgba(44, 27, 8, 0.2);
+  background: var(--card);
   border-radius: var(--radius);
   padding: 14px;
-  box-shadow: 0 6px 18px rgba(80, 50, 30, 0.06);
+  box-shadow: var(--shadow);
   overflow: hidden;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   display: flex;
   flex-direction: column;
-  color: var(--bg);
-  backdrop-filter: saturate(150%) blur(8px);
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(70, 40, 20, 0.2);
+  box-shadow: 0 18px 40px rgba(70, 40, 20, 0.12);
 }
 
 .card img {
@@ -298,7 +279,6 @@ nav a {
   height: 160px;
   object-fit: cover;
   border-radius: 10px;
-  filter: brightness(0.95);
 }
 
 .card h4 {
@@ -306,16 +286,13 @@ nav a {
   font-family: var(--font-serif);
   font-size: 18px;
   font-weight: 700;
-  color: var(--bg);
-  text-shadow: 0 1px 2px rgba(0 0 0 / 0.5);
 }
 
 .card p {
   margin: 0;
+  color: var(--muted);
   font-size: 13px;
   flex-grow: 1;
-  color: rgba(255 255 255 / 0.75);
-  text-shadow: 0 1px 2px rgba(0 0 0 / 0.4);
 }
 
 .price-row {
@@ -327,14 +304,12 @@ nav a {
 
 .price {
   font-weight: 700;
-  color: var(--bg);
-  text-shadow: 0 1px 2px rgba(0 0 0 / 0.5);
+  color: var(--choco);
 }
 
 .weight {
   font-size: 12px;
-  color: rgba(255 255 255 / 0.6);
-  text-shadow: 0 1px 1px rgba(0 0 0 / 0.4);
+  color: var(--muted);
 }
 
 .order-row {
@@ -348,8 +323,6 @@ nav a {
   gap: 18px;
   align-items: center;
   margin-top: 18px;
-  color: var(--choco);
-  text-shadow: 0 1px 2px rgba(0 0 0 / 0.3);
 }
 
 .about img {
@@ -372,25 +345,18 @@ nav a {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin-top: 14px;
-  background: transparent;
-  padding: 8px 0;
 }
 
 .rev {
-  background: rgba(44, 27, 8, 0.2);
+  background: var(--card);
   padding: 12px;
   border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  backdrop-filter: saturate(150%) blur(8px);
-  color: var(--bg);
-  text-shadow: 0 1px 2px rgba(0 0 0 / 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
 .contact-title {
   font-weight: 700;
   margin-bottom: 6px;
-  color: var(--choco);
-  text-shadow: 0 1px 2px rgba(0 0 0 / 0.3);
 }
 
 .contacts-grid {
@@ -408,7 +374,7 @@ nav a {
   display: inline-block;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(92, 58, 33, 0.08);
+  background: rgba(92, 58, 33, 0.06);
   font-weight: 600;
   color: var(--choco);
   font-size: 13px;
