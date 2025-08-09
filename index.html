@@ -7,98 +7,332 @@
   <meta name="description" content="Реальный Шоколад — крафтовый шоколад с высоким содержанием какао, без сахара. Ручная обжарка, натуральные ингредиенты." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#F8E8D4;
-      --choco:#5C3A21;
-      --accent:#D4AF37;
-      --muted:#7b5a46;
-      --card:#fff6f1;
-      --radius:14px;
-      --shadow: 0 6px 20px rgba(90,60,40,0.12);
+    :root {
+      --bg: #F8E8D4;
+      --choco: #5C3A21;
+      --accent: #D4AF37;
+      --muted: #7b5a46;
+      --card: #fff6f1;
+      --radius: 14px;
+      --shadow: 0 6px 20px rgba(90, 60, 40, 0.12);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"Open Sans",system-ui,Helvetica,Arial;
-      background:linear-gradient(180deg,var(--bg),#F4E2D6);
-      color:var(--choco);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
+    * {
+      box-sizing: border-box;
     }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{
-      width:64px;height:64px;border-radius:12px;
-      background:linear-gradient(135deg,#5C3A21,#3f2a1c);
-      display:flex;align-items:center;justify-content:center;
-      color:var(--bg);font-weight:700;font-family:"Playfair Display";
-      box-shadow:var(--shadow);
-      flex-shrink:0;
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Open Sans", system-ui, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg), #F4E2D6);
+      color: var(--choco);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
     }
-    .brand h1{margin:0;font-family:"Playfair Display";font-size:20px;letter-spacing:0.4px}
-    .brand p{margin:0;margin-left:2px;font-size:13px;color:var(--muted)}
-    nav {display:flex; gap:14px; align-items:center}
-    nav a{padding:8px 12px;border-radius:10px;font-weight:600}
-    .btn-ghost{color:var(--choco);opacity:.9}
-    .cart{background:#fff;padding:8px;border-radius:10px;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center}
-    .hero{
-      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:26px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .hero-left{padding:18px}
-    .hero-left h2{font-family:"Playfair Display";font-size:44px;margin:0;color:var(--choco);line-height:1}
-    .hero-left p.lead{margin-top:12px;color:var(--muted);font-size:16px;max-width:640px}
-    .hero-actions{margin-top:18px;display:flex;gap:12px;align-items:center}
-    .btn{
-      background:linear-gradient(180deg,var(--accent),#b98f2a);
-      color:#fff;padding:12px 18px;border-radius:12px;border:none;font-weight:700;cursor:pointer;
-      box-shadow: 0 8px 22px rgba(212,175,55,0.18); transition: transform .18s ease, box-shadow .18s;
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px;
     }
-    .btn:active{transform:translateY(2px)}
-    .btn-soft{
-      background:transparent;border:2px solid rgba(92,58,33,.08);color:var(--choco);padding:10px 14px;border-radius:12px;font-weight:600
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
     }
-    .hero-right{
-      background:var(--card);border-radius:18px;padding:18px;box-shadow:var(--shadow);
-      display:flex;flex-direction:column;gap:12px;align-items:center;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
-    .hero-right img{width:100%;height:320px;object-fit:cover;border-radius:12px}
-    .section{margin-top:42px}
-    .section h3{font-family:"Playfair Display";font-size:28px;margin:0 0 12px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-    .card{
-      background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(80,50,30,0.06);overflow:hidden;
-      transition:transform .22s ease,box-shadow .22s;
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #5C3A21, #3f2a1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg);
+      font-weight: 700;
+      font-family: "Playfair Display", serif;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+      font-size: 24px;
+      user-select: none;
     }
-    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(70,40,20,0.12)}
-    .card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
-    .card h4{margin:10px 0 6px;font-family:"Playfair Display";font-size:18px}
-    .card p{margin:0;color:var(--muted);font-size:13px}
-    .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
-    .price{font-weight:700;color:var(--choco)}
-    .order-row{margin-top:12px;display:flex;gap:8px}
-    .about{display:flex;gap:18px;align-items:center;margin-top:18px}
-    .about img{width:320px;border-radius:12px;box-shadow:var(--shadow);object-fit:cover}
-    .about p{color:var(--muted)}
-    .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
-    .rev{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
-    footer{margin-top:36px;padding:20px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-    .socials{display:flex;gap:10px;align-items:center}
-    .badge{background:linear-gradient(180deg,#8a5a34,#5C3A21);color:#fff;padding:8px 12px;border-radius:10px;font-weight:700}
-    @media (max-width:920px){
-      .hero{grid-template-columns:1fr}
-      .hero-right img{height:260px}
-      .brand h1{font-size:18px}
+    .brand h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      letter-spacing: 0.4px;
     }
-    .fade{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-    .fade.in{opacity:1;transform:none}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(92,58,33,0.06);font-weight:600;color:var(--choco);font-size:13px}
+    .brand p {
+      margin: 0;
+      margin-left: 2px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    nav {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    nav a {
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: rgba(212, 175, 55, 0.15);
+    }
+    .btn-ghost {
+      color: var(--choco);
+      opacity: 0.9;
+      cursor: pointer;
+    }
+    .cart {
+      background: #fff;
+      padding: 8px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      user-select: none;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: center;
+      margin-top: 26px;
+    }
+    .hero-left {
+      padding: 18px;
+    }
+    .hero-left h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 44px;
+      margin: 0;
+      color: var(--choco);
+      line-height: 1;
+    }
+    .hero-left p.lead {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 640px;
+    }
+    .hero-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn {
+      background: linear-gradient(180deg, var(--accent), #b98f2a);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.18);
+      transition: transform 0.18s ease, box-shadow 0.18s;
+    }
+    .btn:active {
+      transform: translateY(2px);
+    }
+    .btn-soft {
+      background: transparent;
+      border: 2px solid rgba(92, 58, 33, 0.08);
+      color: var(--choco);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-soft:hover {
+      background-color: rgba(92, 58, 33, 0.1);
+    }
+    .hero-right {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+    .hero-right img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      user-select: none;
+    }
+    .section {
+      margin-top: 42px;
+    }
+    .section h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin: 0 0 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 6px 18px rgba(80, 50, 30, 0.06);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s;
+      user-select: none;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(70, 40, 20, 0.12);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      user-select: none;
+    }
+    .card h4 {
+      margin: 10px 0 6px;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .price {
+      font-weight: 700;
+      color: var(--choco);
+    }
+    .order-row {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+    }
+    .about {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      user-select: none;
+    }
+    .about p {
+      color: var(--muted);
+      max-width: 600px;
+    }
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .rev {
+      background: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      user-select: none;
+    }
+    footer {
+      margin-top: 36px;
+      padding: 20px 0;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 13px;
+      user-select: none;
+    }
+    .socials {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .badge {
+      background: linear-gradient(180deg, #8a5a34, #5C3A21);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+    @media (max-width: 920px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-right img {
+        height: 260px;
+      }
+      .brand h1 {
+        font-size: 18px;
+      }
+      .about {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .about img {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+    .fade {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade.in {
+      opacity: 1;
+      transform: none;
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(92, 58, 33, 0.06);
+      font-weight: 600;
+      color: var(--choco);
+      font-size: 13px;
+      user-select: none;
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <header>
       <div class="brand">
@@ -113,7 +347,9 @@
         <a class="btn-ghost" href="#about">О нас</a>
         <a class="btn-ghost" href="#contacts">Контакты</a>
         <div class="cart">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="opacity:.9"><path d="M6 6h15l-1.4 7.2a2 2 0 0 1-2 1.6H9.6a2 2 0 0 1-2-1.6L6 6z" stroke="#5C3A21" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="opacity:.9" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6h15l-1.4 7.2a2 2 0 0 1-2 1.6H9.6a2 2 0 0 1-2-1.6L6 6z" stroke="#5C3A21" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span style="font-weight:600;color:var(--muted)">Корзина</span>
         </div>
       </nav>
@@ -126,20 +362,20 @@
         <p class="lead">Каждая плитка — результат ручной обжарки какао-бобов, минимальной обработки и полного отказа от сахара. Для тех, кто ценит чистый вкус какао и натуральность.</p>
         <div class="hero-actions">
           <button class="btn" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">Выбрать шоколад</button>
-          <a class="btn-soft" href="https://t.me/yourshop" target="_blank">Написать в Telegram</a>
+          <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
         </div>
-        <div style="margin-top:12px;color:var(--muted);font-size:13px">Доставка по городу • Упаковка премиум • Подарочные наборы под заказ</div>
+        <div style="margin-top:12px;color:var(--muted);font-size:13px;">Доставка по городу • Упаковка премиум • Подарочные наборы под заказ</div>
       </div>
       <aside class="hero-right fade">
         <img src="IMG_6038.png" alt="Крафтовый шоколад" />
         <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
           <div>
-            <div style="font-weight:700">Премиум-коллекция</div>
-            <div style="color:var(--muted);font-size:13px">Натуральный, без сахара, 85% какао</div>
+            <div style="font-weight:700;">Премиум-коллекция</div>
+            <div style="color:var(--muted);font-size:13px;">Натуральный, без сахара, 85% какао</div>
           </div>
-          <div style="text-align:right">
-            <div style="font-weight:700;color:var(--choco);font-size:18px">450 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">100 г</div>
+          <div style="text-align:right;">
+            <div style="font-weight:700;color:var(--choco);font-size:18px;">450 ₽</div>
+            <div style="font-size:12px;color:var(--muted);">100 г</div>
           </div>
         </div>
       </aside>
@@ -154,49 +390,52 @@
           <p>Нежные шоколадные трюфели с насыщенным вкусом какао.</p>
           <div class="price-row">
             <div class="price">450 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">100 г</div>
+            <div style="font-size:12px;color:var(--muted);">100 г</div>
           </div>
           <div class="order-row">
-            <button class="btn" onclick="order('Трюфель',450)">Заказать</button>
+            <button class="btn" onclick="order('Трюфель', 450)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
+
         <article class="card">
           <img src="IMG_6039.png" alt="Горький шоколад 80%" />
           <h4>Горький шоколад 80%</h4>
           <p>Насыщенный вкус с высоким содержанием какао, без сахара.</p>
           <div class="price-row">
             <div class="price">490 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">100 г</div>
+            <div style="font-size:12px;color:var(--muted);">100 г</div>
           </div>
           <div class="order-row">
-            <button class="btn" onclick="order('Горький шоколад 80%',490)">Заказать</button>
+            <button class="btn" onclick="order('Горький шоколад 80%', 490)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
+
         <article class="card">
           <img src="IMG_6040.png" alt="Шоколад без сахара" />
           <h4>Шоколад без сахара</h4>
           <p>Чистый вкус, натуральные ингредиенты, никаких добавок сахара.</p>
           <div class="price-row">
             <div class="price">470 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">90 г</div>
+            <div style="font-size:12px;color:var(--muted);">90 г</div>
           </div>
           <div class="order-row">
-            <button class="btn" onclick="order('Шоколад без сахара',470)">Заказать</button>
+            <button class="btn" onclick="order('Шоколад без сахара', 470)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
+
         <article class="card">
           <img src="IMG_6041.png" alt="Кусковой шоколад" />
           <h4>Кусковой шоколад</h4>
           <p>Большие кусочки с насыщенным вкусом какао и текстурой.</p>
           <div class="price-row">
             <div class="price">510 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">110 г</div>
+            <div style="font-size:12px;color:var(--muted);">110 г</div>
           </div>
           <div class="order-row">
-            <button class="btn" onclick="order('Кусковой шоколад',510)">Заказать</button>
+            <button class="btn" onclick="order('Кусковой шоколад', 510)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
@@ -208,51 +447,3 @@
       <div class="about">
         <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070f1a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d" alt="Производство шоколада" />
         <div>
-          <p>«Реальный Шоколад» — небольшая мастерская, где каждая плитка делается вручную. Мы используем отборные какао-бобы, минимальную обработку и натуральные добавки: орехи, ягоды и специи. Наш продукт — для тех, кто отказывается от лишнего сахара, но не готов отказываться от удовольствия.</p>
-          <p style="margin-top:10px;color:var(--muted)">Процесс: от выбора бобов и их обжарки до темперирования и упаковки — всё под контролем мастера. Мы производим небольшие партии, чтобы сохранить качество и характер каждого сорта.</p>
-          <div style="margin-top:12px">
-            <strong>Почему мы:</strong>
-            <ul style="margin:8px 0 0 18px;color:var(--muted)">
-              <li>Натурально — без сахара</li>
-              <li>Малые партии, ручная упаковка</li>
-              <li>Высокое содержание какао-бобов (от 70% и выше)</li>
-              <li>Прозрачность происхождения ингредиентов</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section fade">
-      <h3>Отзывы</h3>
-      <div class="reviews">
-        <div class="rev">
-          <strong>Арина, Москва</strong>
-          <p style="margin:8px 0;color:var(--muted)">«Это лучший горький шоколад, который я пробовала. Глубокий вкус, ноль сахара — идеально к черному кофе»</p>
-        </div>
-        <div class="rev">
-          <strong>Павел, Санкт-Петербург</strong>
-          <p style="margin:8px 0;color:var(--muted)">«Купил набор — друзья в восторге. Упаковка — отдельная история, подарил на праздник»</p>
-        </div>
-        <div class="rev">
-          <strong>Юлия, Краснодар</strong>
-          <p style="margin:8px 0;color:var(--muted)">«Очень плотная текстура, насыщенное послевкусие. Рекомендую всем, кто любит настоящий какао»</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacts" class="section fade">
-      <h3>Контакты</h3>
-      <div style="display:flex;gap:18px;flex-wrap:wrap">
-        <div style="min-width:220px;">
-          <div style="font-weight:700">Заказы</div>
-          <div style="color:var(--muted);margin-top:6px">Телеграм: <a href="https://t.me/yourshop" target="_blank">@yourshop</a></div>
-          <div style="color:var(--muted);margin-top:6px">WhatsApp: +7 (900) 000-00-00</div>
-        </div>
-        <div style="min-width:280px;">
-          <div style="font-weight:700">Доставка</div>
-          <div style="color:var(--muted);margin-top:6px">Городская курьерская служба • Самовывоз по договорённости</div>
-        </div>
-        <div style="min-width:220px;">
-          <div style="font-weight:700">Адрес</div>
-          <div style="color:var(--muted);margin-top:6
