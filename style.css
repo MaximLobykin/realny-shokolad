@@ -19,22 +19,13 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: var(--font-sans);
-  background: url('images/cacao-texture.jpg') no-repeat center center fixed;
+  background: linear-gradient(135deg, #d4af37 0%, #5c3a21 100%) no-repeat center center fixed;
   background-size: cover;
   color: var(--choco);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(44, 27, 8, 0.2);
-  pointer-events: none;
-  z-index: 0;
 }
 
 a {
