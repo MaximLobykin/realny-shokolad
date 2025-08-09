@@ -118,7 +118,6 @@ nav a:hover {
 }
 
 .hero-left {
-  padding: 18px 0 0 0;
   background: rgba(255, 246, 241, 0.95);
   border-radius: var(--radius);
   padding: 18px;
@@ -183,55 +182,40 @@ nav a:hover {
   border-color: var(--accent);
 }
 
-.products {
-  margin-top: 40px;
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
 }
 
-.products h2 {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  text-align: center;
-  color: var(--choco);
+.btn-salute {
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
 }
 
-.product-list {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+.btn-salute:active::before,
+.btn-salute:active::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: confetti 0.8s ease forwards;
+  pointer-events: none;
+  opacity: 1;
 }
 
-.product-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s ease;
+.btn-salute:active::before {
+  top: 10px;
+  left: 10px;
+  animation-delay: 0s;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: var(--radius);
-  object-fit: cover;
-  height: 200px;
-}
-
-.product-card h3 {
-  margin: 12px 0 8px;
-  font-size: 18px;
-  color: var(--choco);
-}
-
-.product-card p {
-  font-size: 14px;
-  color: var(--muted);
+.btn-salute:active::after {
+  top: 10px;
+  right: 10px;
+  animation-delay: 0.2s;
 }
 
 @media (max-width: 920px) {
