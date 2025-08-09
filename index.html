@@ -245,20 +245,29 @@
     </section>
 
     <section id="contacts" class="section fade in">
-  <h3>Контакты</h3>
-  <div style="display:flex;gap:18px;flex-wrap:wrap">
-    <div style="min-width:220px;">
-      <div style="font-weight:700">Заказы</div>
-      <div style="color:var(--muted);margin-top:6px">Телеграм: <a href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">@yourshop</a></div>
-      <div style="color:var(--muted);margin-top:6px">WhatsApp: +7 (900) 000-00-00</div>
+    <h3>Контакты</h3>
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <div style="min-width:220px;">
+        <div style="font-weight:700">Заказы</div>
+        <div style="color:var(--muted);margin-top:6px">Телеграм: <a href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">@yourshop</a></div>
+        <div style="color:var(--muted);margin-top:6px">WhatsApp: +7 (900) 000-00-00</div>
+      </div>
+      <div style="min-width:280px;">
+        <div style="font-weight:700">Доставка</div>
+        <div style="color:var(--muted);margin-top:6px">Городская курьерская служба • Самовывоз по договорённости</div>
+      </div>
+      <div style="min-width:220px;">
+        <div style="font-weight:700">Адрес</div>
+        <div style="color:var(--muted);margin-top:6px">г. Ваш Город, ул. Примерная, д. 12, офис 34</div>
+      </div>
     </div>
-    <div style="min-width:280px;">
-      <div style="font-weight:700">Доставка</div>
-      <div style="color:var(--muted);margin-top:6px">Городская курьерская служба • Самовывоз по договорённости</div>
-    </div>
-    <div style="min-width:220px;">
-      <div style="font-weight:700">Адрес</div>
-      <div style="color:var(--muted);margin-top:6px">г. Ваш Город, ул. Примерная, д. 12, офис 34</div>
-    </div>
-  </div>
-</section>
+  </section>
+
+  <script>
+    function order(product, price) {
+      alert(`Спасибо за заказ!\n\nТовар: ${product}\nЦена: ${price} ₽`);
+    }
+  </script>
+</div>
+</body>
+</html>
