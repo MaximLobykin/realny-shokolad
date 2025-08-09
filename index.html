@@ -11,17 +11,15 @@
 <body>
   <div class="container">
     <header>
-      <div class="brand">
-        <div class="logo">RS</div>
-        <div>
-          <h1>Реальный Шоколад</h1>
-          <p>Крафтовый шоколад. Высокое содержание какао • Без сахара</p>
-        </div>
-      </div>
-      <nav>
-        <a class="btn-ghost" href="#catalog">Каталог</a>
-        <a class="btn-ghost" href="#about">О нас</a>
-        <a class="btn-ghost" href="#contacts">Контакты</a>
+      <nav class="nav-group nav-left">
+        <a href="#catalog" class="btn-ghost">Каталог</a>
+        <a href="#contacts" class="btn-ghost">Контакты</a>
+      </nav>
+
+      <div class="logo">RS</div>
+
+      <nav class="nav-group nav-right">
+        <a href="#about" class="btn-ghost">О нас</a>
         <a class="cart" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer" aria-label="Корзина">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="opacity:.9"><path d="M6 6h15l-1.4 7.2a2 2 0 0 1-2 1.6H9.6a2 2 0 0 1-2-1.6L6 6z" stroke="#5C3A21" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>Корзина</span>
@@ -181,18 +179,13 @@
 
     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
-          entry.target.classList.add('in');
-          appearOnScroll.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        appearOnScroll.unobserve(entry.target);
       });
     }, appearOptions);
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+    faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
 </html>
