@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#F8E8D4;
-      --choco:#5C3A21;
-      --accent:#D4AF37;
+      --bg:#F8E8D4;           /* светлый бежевый фон */
+      --choco:#5C3A21;        /* тёмный шоколад для заголовков */
+      --accent:#D4AF37;       /* золотистый акцент (кнопки) */
       --muted:#7b5a46;
       --card:#fff6f1;
       --radius:14px;
@@ -33,6 +33,7 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:28px}
 
+    /* Header */
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:14px}
     .logo{
@@ -51,6 +52,7 @@
     .btn-ghost{color:var(--choco);opacity:.9}
     .cart{background:#fff;padding:8px;border-radius:10px;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center}
 
+    /* Hero */
     .hero{
       display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:26px;
     }
@@ -74,6 +76,7 @@
     }
     .hero-right img{width:100%;height:320px;object-fit:cover;border-radius:12px}
 
+    /* Catalog */
     .section{margin-top:42px}
     .section h3{font-family:"Playfair Display";font-size:28px;margin:0 0 12px}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
@@ -90,22 +93,26 @@
     .price{font-weight:700;color:var(--choco)}
     .order-row{margin-top:12px;display:flex;gap:8px}
 
+    /* About */
     .about{display:flex;gap:18px;align-items:center;margin-top:18px}
     .about img{width:320px;border-radius:12px;box-shadow:var(--shadow);object-fit:cover}
     .about p{color:var(--muted)}
 
+    /* Reviews / Footer */
     .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
     .rev{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
     footer{margin-top:36px;padding:20px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
     .socials{display:flex;gap:10px;align-items:center}
     .badge{background:linear-gradient(180deg,#8a5a34,#5C3A21);color:#fff;padding:8px 12px;border-radius:10px;font-weight:700}
 
+    /* Small screens */
     @media (max-width:920px){
       .hero{grid-template-columns:1fr}
       .hero-right img{height:260px}
       .brand h1{font-size:18px}
     }
 
+    /* small animations */
     .fade{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
     .fade.in{opacity:1;transform:none}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(92,58,33,0.06);font-weight:600;color:var(--choco);font-size:13px}
@@ -133,6 +140,7 @@
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-left fade">
         <div class="pill">Местный крафт • Маленькие партии</div>
@@ -160,9 +168,11 @@
       </aside>
     </section>
 
+    <!-- CATALOG -->
     <section id="catalog" class="section fade">
       <h3>Каталог</h3>
       <div class="grid">
+        <!-- Card 1 -->
         <article class="card">
           <img src="IMG_6038.png" alt="Трюфель">
           <h4>Трюфель</h4>
@@ -177,6 +187,7 @@
           </div>
         </article>
 
+        <!-- Card 2 -->
         <article class="card">
           <img src="IMG_6039.png" alt="Горький шоколад 80%">
           <h4>Горький шоколад 80%</h4>
@@ -191,6 +202,7 @@
           </div>
         </article>
 
+        <!-- Card 3 -->
         <article class="card">
           <img src="IMG_6040.png" alt="Шоколад без сахара">
           <h4>Шоколад без сахара</h4>
@@ -205,6 +217,7 @@
           </div>
         </article>
 
+        <!-- Card 4 -->
         <article class="card">
           <img src="IMG_6041.png" alt="Кусковой шоколад">
           <h4>Кусковой шоколад</h4>
@@ -221,6 +234,7 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section fade">
       <h3>О бренде</h3>
       <div class="about">
@@ -243,6 +257,7 @@
       </div>
     </section>
 
+    <!-- REVIEWS -->
     <section class="section fade">
       <h3>Отзывы</h3>
       <div class="reviews">
@@ -261,17 +276,11 @@
       </div>
     </section>
 
+    <!-- CONTACTS -->
     <section id="contacts" class="section fade">
       <h3>Контакты</h3>
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <div style="min-width:220px;">
           <div style="font-weight:700">Заказы</div>
           <div style="color:var(--muted);margin-top:6px">Телеграм: <a href="https://t.me/yourshop" target="_blank">@yourshop</a></div>
-          <div style="color:var(--muted);margin-top:6px">WhatsApp: +7 (900) 000-00-00</div>
-        </div>
-        <div style="min-width:280px;">
-          <div style="font-weight:700">Доставка</div>
-          <div style="color:var(--muted);margin-top:6px">Городская курьерская служба • Самовывоз по договорённости</div>
-        </div>
-        <div style="min-width:220px;">
-          <div style="font-weight:700">П
+          <div style="color:var(--muted);margin-top:6px">WhatsApp: +
