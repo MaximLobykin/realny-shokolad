@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#F8E8D4;           /* светлый бежевый фон */
-      --choco:#5C3A21;        /* тёмный шоколад для заголовков */
-      --accent:#D4AF37;       /* золотистый акцент (кнопки) */
+      --bg:#F8E8D4;
+      --choco:#5C3A21;
+      --accent:#D4AF37;
       --muted:#7b5a46;
       --card:#fff6f1;
       --radius:14px;
@@ -33,7 +33,6 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:28px}
 
-    /* Header */
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:14px}
     .logo{
@@ -52,7 +51,6 @@
     .btn-ghost{color:var(--choco);opacity:.9}
     .cart{background:#fff;padding:8px;border-radius:10px;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center}
 
-    /* Hero */
     .hero{
       display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:26px;
     }
@@ -76,7 +74,6 @@
     }
     .hero-right img{width:100%;height:320px;object-fit:cover;border-radius:12px}
 
-    /* Catalog */
     .section{margin-top:42px}
     .section h3{font-family:"Playfair Display";font-size:28px;margin:0 0 12px}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
@@ -93,26 +90,22 @@
     .price{font-weight:700;color:var(--choco)}
     .order-row{margin-top:12px;display:flex;gap:8px}
 
-    /* About */
     .about{display:flex;gap:18px;align-items:center;margin-top:18px}
     .about img{width:320px;border-radius:12px;box-shadow:var(--shadow);object-fit:cover}
     .about p{color:var(--muted)}
 
-    /* Reviews / Footer */
     .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
     .rev{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
     footer{margin-top:36px;padding:20px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
     .socials{display:flex;gap:10px;align-items:center}
     .badge{background:linear-gradient(180deg,#8a5a34,#5C3A21);color:#fff;padding:8px 12px;border-radius:10px;font-weight:700}
 
-    /* Small screens */
     @media (max-width:920px){
       .hero{grid-template-columns:1fr}
       .hero-right img{height:260px}
       .brand h1{font-size:18px}
     }
 
-    /* small animations */
     .fade{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
     .fade.in{opacity:1;transform:none}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(92,58,33,0.06);font-weight:600;color:var(--choco);font-size:13px}
@@ -140,7 +133,6 @@
       </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-left fade">
         <div class="pill">Местный крафт • Маленькие партии</div>
@@ -154,89 +146,81 @@
       </div>
 
       <aside class="hero-right fade">
-        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a8d1a3ea2b3a2b3f1a8b0a0b3b3c9cf" alt="Крафтовый шоколад">
+        <img src="IMG_6039.png" alt="Горький шоколад 80%">
         <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
           <div>
             <div style="font-weight:700">Премиум-коллекция</div>
-            <div style="color:var(--muted);font-size:13px">Натуральный, без сахара, 85% какао</div>
+            <div style="color:var(--muted);font-size:13px">Натуральный, без сахара, 80% какао</div>
           </div>
           <div style="text-align:right">
-            <div style="font-weight:700;color:var(--choco);font-size:18px">450 ₽</div>
+            <div style="font-weight:700;color:var(--choco);font-size:18px">490 ₽</div>
             <div style="font-size:12px;color:var(--muted)">100 г</div>
           </div>
         </div>
       </aside>
     </section>
 
-    <!-- CATALOG -->
     <section id="catalog" class="section fade">
       <h3>Каталог</h3>
       <div class="grid">
-        <!-- Card 1 -->
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1603006359759-dc5b1f8f0a5d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b7c9d9c4dbb6b2e3b1d2b5f1f2a3c4d" alt="Шоколад 85%">
-          <h4>Плитка «85% Классика»</h4>
-          <p>Высокое содержание какао, ни грамма сахара. Глубокие нотки табака и черники.</p>
+          <img src="IMG_6038.png" alt="Трюфель">
+          <h4>Трюфель</h4>
+          <p>Нежные шоколадные трюфели с насыщенным вкусом какао.</p>
           <div class="price-row">
             <div class="price">450 ₽</div>
             <div style="font-size:12px;color:var(--muted)">100 г</div>
           </div>
           <div class="order-row">
-            <!-- Заказ через Telegram: поменяй yourshop на ваш ник -->
-            <button class="btn" onclick="order('85% Классика',450)">Заказать</button>
+            <button class="btn" onclick="order('Трюфель',450)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
 
-        <!-- Card 2 -->
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d" alt="Шоколад 92%">
-          <h4>Плитка «92% Интенсив»</h4>
-          <p>Самые насыщенные бобы, долгий послевкусие. Для настоящих ценителей горького.</p>
+          <img src="IMG_6039.png" alt="Горький шоколад 80%">
+          <h4>Горький шоколад 80%</h4>
+          <p>Насыщенный вкус с высоким содержанием какао, без сахара.</p>
           <div class="price-row">
-            <div class="price">590 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">80 г</div>
+            <div class="price">490 ₽</div>
+            <div style="font-size:12px;color:var(--muted)">100 г</div>
           </div>
           <div class="order-row">
-            <button class="btn" onclick="order('92% Интенсив',590)">Заказать</button>
+            <button class="btn" onclick="order('Горький шоколад 80%',490)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
 
-        <!-- Card 3 -->
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2" alt="Шоколад с орехами">
-          <h4>Плитка «Какао & Орех»</h4>
-          <p>Крупные кусочки обжаренного ореха в гладкой какао-массе. Без сахара.</p>
+          <img src="IMG_6040.png" alt="Шоколад без сахара">
+          <h4>Шоколад без сахара</h4>
+          <p>Чистый вкус, натуральные ингредиенты, никаких добавок сахара.</p>
           <div class="price-row">
-            <div class="price">520 ₽</div>
+            <div class="price">470 ₽</div>
+            <div style="font-size:12px;color:var(--muted)">90 г</div>
+          </div>
+          <div class="order-row">
+            <button class="btn" onclick="order('Шоколад без сахара',470)">Заказать</button>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="IMG_6041.png" alt="Кусковой шоколад">
+          <h4>Кусковой шоколад</h4>
+          <p>Большие кусочки с насыщенным вкусом какао и текстурой.</p>
+          <div class="price-row">
+            <div class="price">510 ₽</div>
             <div style="font-size:12px;color:var(--muted)">110 г</div>
           </div>
           <div class="order-row">
-            <button class="btn" onclick="order('Какао & Орех',520)">Заказать</button>
+            <button class="btn" onclick="order('Кусковой шоколад',510)">Заказать</button>
             <a class="btn-soft" href="#about">Подробнее</a>
           </div>
         </article>
-
-        <!-- Card 4 -->
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c5f8a2b4d6a7f8c9b1d2e3f4a5b6c7d" alt="Подарочный набор">
-          <h4>Подарочный набор «Мастерская»</h4>
-          <p>Набор из 3 плиток, стильная упаковка, карточка с историей происхождения бобов.</p>
-          <div class="price-row">
-            <div class="price">1 450 ₽</div>
-            <div style="font-size:12px;color:var(--muted)">3 × 100 г</div>
-          </div>
-          <div class="order-row">
-            <button class="btn" onclick="order('Подарочный набор «Мастерская»',1450)">Заказать</button>
-            <a class="btn-soft" href="#about">Подробнее</a>
-          </div>
-        </article>
-
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="section fade">
       <h3>О бренде</h3>
       <div class="about">
@@ -259,7 +243,6 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
     <section class="section fade">
       <h3>Отзывы</h3>
       <div class="reviews">
@@ -278,7 +261,6 @@
       </div>
     </section>
 
-    <!-- CONTACTS -->
     <section id="contacts" class="section fade">
       <h3>Контакты</h3>
       <div style="display:flex;gap:18px;flex-wrap:wrap">
@@ -292,51 +274,4 @@
           <div style="color:var(--muted);margin-top:6px">Городская курьерская служба • Самовывоз по договорённости</div>
         </div>
         <div style="min-width:220px;">
-          <div style="font-weight:700">Партнёры</div>
-          <div style="color:var(--muted);margin-top:6px">Пишите в Telegram для сотрудничества</div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div style="display:flex;gap:12px;align-items:center">
-        <div class="badge">Реальный</div>
-        <div style="font-size:13px;color:var(--muted)">© 2025 Реальный Шоколад — все права защищены</div>
-      </div>
-      <div class="socials">
-        <a href="https://instagram.com" target="_blank" style="color:var(--muted)">Instagram</a>
-        <a href="https://t.me/yourshop" target="_blank" style="color:var(--muted)">Telegram</a>
-      </div>
-    </footer>
-
-  </div>
-
-  <script>
-    // Простая логика "Заказа" — собираем данные и открываем Telegram с предзаполненным сообщением.
-    // Поменяй "yourshop" в ссылке на реальный ник вашего Telegram.
-    function order(product,price){
-      // Предзаполненный текст (можно редактировать)
-      const text = encodeURIComponent(`Здравствуйте! Хочу заказать: ${product}. Цена: ${price} ₽. Имя: ____ Телефон: ____ Адрес/комментарий: ____`);
-      // ссылка: замените yourshop на ваш ник
-      const url = `https://t.me/yourshop?text=${text}`;
-      window.open(url,'_blank');
-    }
-
-    // Анимация появления при скролле
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('in');
-      });
-    },{threshold:0.12});
-    document.querySelectorAll('.fade').forEach(el=>{
-      obs.observe(el);
-    });
-
-    // Лёгкая адаптация под iPhone: при касании кнопки — небольшой эффект
-    document.querySelectorAll('.btn, .btn-soft').forEach(b=>{
-      b.addEventListener('touchstart', ()=> b.style.transform='translateY(1px)');
-      b.addEventListener('touchend', ()=> b.style.transform='none');
-    });
-  </script>
-</body>
-</html>
+          <div style="font-weight:700">П
