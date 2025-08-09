@@ -12,21 +12,23 @@
   <div class="container">
     <header>
       <div class="logo-wrapper">
-        <div class="logo">RC <span class="crown">👑</span></div>
+        <div class="logo">
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Корона">
+            <path d="M10 40 L20 10 L30 40 L40 10 L50 40 L55 20 L60 40 L10 40 Z" stroke="#5C3A21" stroke-width="2" fill="#D4AF37"/>
+            <circle cx="20" cy="10" r="3" fill="#5C3A21"/>
+            <circle cx="40" cy="10" r="3" fill="#5C3A21"/>
+            <circle cx="55" cy="20" r="3" fill="#5C3A21"/>
+          </svg>
+          <span>RC</span>
+        </div>
       </div>
-
       <nav class="nav-left">
-        <a href="#catalog" class="btn-header">Каталог</a>
-        <a href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer" class="btn-header">Корзина</a>
+        <a href="#catalog" class="btn-ghost">Каталог</a>
+        <a href="#about" class="btn-ghost">О нас</a>
       </nav>
-
-      <nav class="nav-center">
-        <a href="#reviews" class="btn-header btn-center">Отзывы</a>
-      </nav>
-
       <nav class="nav-right">
-        <a href="#reviews" class="btn-header">Отзывы</a>
-        <a href="#about" class="btn-header">О нас</a>
+        <a href="#reviews" class="btn-ghost">Отзывы</a>
+        <a href="#contacts" class="btn-ghost">Контакты</a>
       </nav>
     </header>
 
@@ -56,7 +58,61 @@
     <section id="catalog" class="section fade">
       <h3>Каталог</h3>
       <div class="grid">
-        <!-- карточки товаров (как было) -->
+        <article class="card">
+          <img src="images/IMG_6038.png" alt="Трюфель" />
+          <h4>Трюфель</h4>
+          <p>Нежные шоколадные трюфели с насыщенным вкусом какао.</p>
+          <div class="price-row">
+            <div class="price">450 ₽</div>
+            <div class="weight">100 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/IMG_6039.png" alt="Горький шоколад 80%" />
+          <h4>Горький шоколад 80%</h4>
+          <p>Насыщенный вкус с высоким содержанием какао, без сахара.</p>
+          <div class="price-row">
+            <div class="price">490 ₽</div>
+            <div class="weight">100 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/IMG_6040.png" alt="Шоколад без сахара" />
+          <h4>Шоколад без сахара</h4>
+          <p>Чистый вкус, натуральные ингредиенты, никаких добавок сахара.</p>
+          <div class="price-row">
+            <div class="price">470 ₽</div>
+            <div class="weight">90 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/IMG_6041.png" alt="Кусковой шоколад" />
+          <h4>Кусковой шоколад</h4>
+          <p>Большие кусочки с насыщенным вкусом какао и текстурой.</p>
+          <div class="price-row">
+            <div class="price">510 ₽</div>
+            <div class="weight">110 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -65,8 +121,8 @@
       <div class="about">
         <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070f1a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d" alt="Производство шоколада" />
         <div>
-          <p class="about-main-text">«Реальный Шоколад» — небольшая мастерская, где каждая плитка делается вручную. Мы используем отборные какао-бобы, минимальную обработку и натуральные добавки: орехи, ягоды и специи. Наш продукт — для тех, кто отказывается от лишнего сахара, но не готов отказываться от удовольствия.</p>
-          <p class="about-sub-text">Процесс: от выбора бобов и их обжарки до темперирования и упаковки — всё под контролем мастера. Мы производим небольшие партии, чтобы сохранить качество и характер каждого сорта.</p>
+          <p>«Реальный Шоколад» — небольшая мастерская, где каждая плитка делается вручную. Мы используем отборные какао-бобы, минимальную обработку и натуральные добавки: орехи, ягоды и специи. Наш продукт — для тех, кто отказывается от лишнего сахара, но не готов отказываться от удовольствия.</p>
+          <p class="muted">Процесс: от выбора бобов и их обжарки до темперирования и упаковки — всё под контролем мастера. Мы производим небольшие партии, чтобы сохранить качество и характер каждого сорта.</p>
           <div>
             <strong>Почему мы:</strong>
             <ul class="muted reasons-list">
@@ -83,7 +139,18 @@
     <section id="reviews" class="section fade">
       <h3>Отзывы</h3>
       <div class="reviews">
-        <!-- отзывы -->
+        <div class="rev">
+          <strong>Арина, Москва</strong>
+          <p class="muted">«Это лучший горький шоколад, который я пробовала. Глубокий вкус, ноль сахара — идеально к черному кофе»</p>
+        </div>
+        <div class="rev">
+          <strong>Павел, Санкт-Петербург</strong>
+          <p class="muted">«Купил набор — друзья в восторге. Упаковка — отдельная история, подарил на праздник»</p>
+        </div>
+        <div class="rev">
+          <strong>Юлия, Краснодар</strong>
+          <p class="muted">«Очень плотная текстура, насыщенное послевкусие. Рекомендую всем, кто любит настоящий какао»</p>
+        </div>
       </div>
     </section>
 
@@ -92,16 +159,16 @@
       <div class="contacts-grid">
         <div>
           <div class="contact-title">Заказы</div>
-          <div class="muted contacts-small">Телеграм: <a href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">@yourshop</a></div>
-          <div class="muted contacts-small">WhatsApp: +7 (900) 000-00-00</div>
+          <div class="muted">Телеграм: <a href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">@yourshop</a></div>
+          <div class="muted">WhatsApp: +7 (900) 000-00-00</div>
         </div>
         <div>
           <div class="contact-title">Доставка</div>
-          <div class="muted contacts-small">Городская курьерская служба • Самовывоз по договорённости</div>
+          <div class="muted">Городская курьерская служба • Самовывоз по договорённости</div>
         </div>
         <div>
           <div class="contact-title">Адрес</div>
-          <div class="muted contacts-small">г. Ваш Город, ул. Примерная, д. 12, офис 34</div>
+          <div class="muted">г. Ваш Город, ул. Примерная, д. 12, офис 34</div>
         </div>
       </div>
     </section>
