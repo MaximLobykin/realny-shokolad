@@ -19,7 +19,7 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: var(--font-sans);
-  background: url('images/cacao-texture.jpg') no-repeat center center fixed;
+  background: url('images/cacao-texture.png') no-repeat center center fixed;
   background-size: cover;
   color: var(--choco);
   -webkit-font-smoothing: antialiased;
@@ -27,6 +27,8 @@ html, body {
   line-height: 1.5;
   overflow-x: hidden;
 }
+
+/* остальной CSS без изменений */
 
 a {
   color: inherit;
