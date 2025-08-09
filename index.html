@@ -1,42 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крафтовый шоколад</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Реальный Шоколад — Натуральный крафтовый шоколад</title>
+  <meta name="description" content="Реальный Шоколад — крафтовый шоколад с высоким содержанием какао, без сахара. Ручная обжарка, натуральные ингредиенты." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
     <header>
-        <h1>Натуральный крафтовый шоколад</h1>
-        <p>Ручная работа, 100% натуральные ингредиенты</p>
+      <div class="brand">
+        <div class="logo">RS</div>
+        <div>
+          <h1>Реальный Шоколад</h1>
+          <p>Крафтовый шоколад. Высокое содержание какао • Без сахара</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn-ghost" href="#catalog">Каталог</a>
+        <a class="btn-ghost" href="#about">О нас</a>
+        <a class="btn-ghost" href="#contacts">Контакты</a>
+        <a class="cart" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer" aria-label="Корзина">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="opacity:.9"><path d="M6 6h15l-1.4 7.2a2 2 0 0 1-2 1.6H9.6a2 2 0 0 1-2-1.6L6 6z" stroke="#5C3A21" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Корзина</span>
+        </a>
+      </nav>
     </header>
 
-    <section class="products">
-        <div class="product">
-            <img src="images/shoko1.jpg" alt="Шоколад 1">
-            <h2>Молочный шоколад</h2>
-            <p>Нежный и сладкий вкус с натуральным молоком.</p>
+    <section class="hero fade">
+      <div class="hero-left">
+        <div class="pill">Местный крафт • Маленькие партии</div>
+        <h2>Ручной шоколад с истинным вкусом какао</h2>
+        <p class="lead">Каждая плитка — результат ручной обжарки какао-бобов, минимальной обработки и полного отказа от сахара. Для тех, кто ценит чистый вкус какао и натуральность.</p>
+        <div class="hero-actions">
+          <button class="btn" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">Выбрать шоколад</button>
+          <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
         </div>
-        <div class="product">
-            <img src="images/shoko2.jpg" alt="Шоколад 2">
-            <h2>Горький шоколад</h2>
-            <p>Насыщенный какао вкус для настоящих гурманов.</p>
+        <div class="note">Доставка по городу • Упаковка премиум • Подарочные наборы под заказ</div>
+      </div>
+      <aside class="hero-right">
+        <img src="images/IMG_6038.png" alt="Крафтовый шоколад" />
+        <div class="product-info">
+          <div>
+            <div class="product-title">Премиум-коллекция</div>
+            <div class="product-subtitle">Натуральный, без сахара, 85% какао</div>
+          </div>
+          <div class="product-price">450 ₽</div>
         </div>
-        <div class="product">
-            <img src="images/shoko3.jpg" alt="Шоколад 3">
-            <h2>Белый шоколад</h2>
-            <p>Лёгкий, сливочный, тающий во рту.</p>
-        </div>
-        <div class="product">
-            <img src="images/shoko4.jpg" alt="Шоколад 4">
-            <h2>Ореховый шоколад</h2>
-            <p>С хрустящими кусочками орехов и богатым вкусом.</p>
-        </div>
+      </aside>
     </section>
 
-    <footer>
-        <p>© 2025 Крафтовый шоколад. Все права защищены.</p>
-    </footer>
+    <section id="catalog" class="section fade">
+      <h3>Каталог</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="images/IMG_6038.png" alt="Трюфель" />
+          <h4>Трюфель</h4>
+          <p>Нежные шоколадные трюфели с насыщенным вкусом какао.</p>
+          <div class="price-row">
+            <div class="price">450 ₽</div>
+            <div class="weight">100 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/IMG_6039.png" alt="Горький шоколад 80%" />
+          <h4>Горький шоколад 80%</h4>
+          <p>Насыщенный вкус с высоким содержанием какао, без сахара.</p>
+          <div class="price-row">
+            <div class="price">490 ₽</div>
+            <div class="weight">100 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/IMG_6040.png" alt="Шоколад без сахара" />
+          <h4>Шоколад без сахара</h4>
+          <p>Чистый вкус, натуральные ингредиенты, никаких добавок сахара.</p>
+          <div class="price-row">
+            <div class="price">470 ₽</div>
+            <div class="weight">90 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/IMG_6041.png" alt="Кусковой шоколад" />
+          <h4>Кусковой шоколад</h4>
+          <p>Большие кусочки с насыщенным вкусом какао и текстурой.</p>
+          <div class="price-row">
+            <div class="price">510 ₽</div>
+            <div class="weight">110 г</div>
+          </div>
+          <div class="order-row">
+            <a class="btn-soft" href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">Купить в Telegram</a>
+            <a class="btn-soft" href="#about">Подробнее</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section fade">
+      <h3>О бренде</h3>
+      <div class="about">
+        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070f1a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d" alt="Производство шоколада" />
+        <div>
+          <p>«Реальный Шоколад» — небольшая мастерская, где каждая плитка делается вручную. Мы используем отборные какао-бобы, минимальную обработку и натуральные добавки: орехи, ягоды и специи. Наш продукт — для тех, кто отказывается от лишнего сахара, но не готов отказываться от удовольствия.</p>
+          <p class="muted">Процесс: от выбора бобов и их обжарки до темперирования и упаковки — всё под контролем мастера. Мы производим небольшие партии, чтобы сохранить качество и характер каждого сорта.</p>
+          <div>
+            <strong>Почему мы:</strong>
+            <ul class="muted reasons-list">
+              <li>Натурально — без сахара</li>
+              <li>Малые партии, ручная упаковка</li>
+              <li>Высокое содержание какао-бобов (от 70% и выше)</li>
+              <li>Прозрачность происхождения ингредиентов</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade">
+      <h3>Отзывы</h3>
+      <div class="reviews">
+        <div class="rev">
+          <strong>Арина, Москва</strong>
+          <p class="muted">«Это лучший горький шоколад, который я пробовала. Глубокий вкус, ноль сахара — идеально к черному кофе»</p>
+        </div>
+        <div class="rev">
+          <strong>Павел, Санкт-Петербург</strong>
+          <p class="muted">«Купил набор — друзья в восторге. Упаковка — отдельная история, подарил на праздник»</p>
+        </div>
+        <div class="rev">
+          <strong>Юлия, Краснодар</strong>
+          <p class="muted">«Очень плотная текстура, насыщенное послевкусие. Рекомендую всем, кто любит настоящий какао»</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section fade">
+      <h3>Контакты</h3>
+      <div class="contacts-grid">
+        <div>
+          <div class="contact-title">Заказы</div>
+          <div class="muted">Телеграм: <a href="https://t.me/yourshop" target="_blank" rel="noopener noreferrer">@yourshop</a></div>
+          <div class="muted">WhatsApp: +7 (900) 000-00-00</div>
+        </div>
+        <div>
+          <div class="contact-title">Доставка</div>
+          <div class="muted">Городская курьерская служба • Самовывоз по договорённости</div>
+        </div>
+        <div>
+          <div class="contact-title">Адрес</div>
+          <div class="muted">г. Ваш Город, ул. Примерная, д. 12, офис 34</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const faders = document.querySelectorAll('.fade');
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('in');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
